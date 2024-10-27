@@ -1,0 +1,32 @@
+<div class="card bg-base-100 border">
+  <figure class="px-2 pt-2">
+    <img src="" class="rounded-lg w-full" />
+  </figure>
+  <div class="mx-2 pt-2 pb-5 border-b">
+    <h1 class="text-lg font-bold mb-3">${pet_name}</h1>
+    <div class="text-gray-500">
+      <h2 class="text-sm"><i class="fa-solid fa-shield-dog"></i> Breed :</h2>
+      <h2 class="text-sm"><i class="fa-regular fa-calendar"></i> Birth :</h2>
+      <h2 class="text-sm"><i class="fa-solid fa-mercury"></i> Gender :</h2>
+      <h2 class="text-sm"><i class="fa-solid fa-dollar-sign"></i> Price :</h2>
+    </div>
+  </div>
+  <div class="mx-2 pt-2 pb-3 flex items-center justify-between">
+    <button class="border px-3 py-1 rounded hover:border-[#0E7A81]">
+      <i class="fa-regular fa-thumbs-up"></i>
+    </button>
+
+    <button
+      id="adopt-${petId}-btn"
+      class="btn border-gray-200 text-[#0E7A81] hover:bg-[#0E7A81] btn-outline hover:text-white btn-sm"
+    >
+      Adopt
+    </button>
+
+    <button
+      class="btn border-gray-200 text-[#0E7A81] hover:bg-[#0E7A81] btn-outline hover:text-white btn-sm"
+    >
+      Details
+    </button>
+  </div>
+</div>

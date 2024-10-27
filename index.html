@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy || Home</title>
+    <link rel="shortcut icon" href="./aasets/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active {
+        border-radius: 200px !important;
+        background-color: #0e7a8110;
+        border-color: #0e7a81;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="w-11/12 mx-auto flex justify-between items-center py-2">
+      <a href="#" class="logo flex items-center gap-1">
+        <div>
+          <img src="./aasets/logo.png" alt="" class="w-5" />
+        </div>
+        <h2 class="text-xl font-bold hidden md:block">Peddy</h2>
+      </a>
+      <nav>
+        <ul class="flex gap-5">
+          <li>
+            <a href="" class="hover:text-green-800 hover:border-b-2">Home</a>
+          </li>
+          <li>
+            <a href="" class="hover:text-green-800 hover:border-b-2">Blog</a>
+          </li>
+          <li>
+            <a href="" class="hover:text-green-800 hover:border-b-2">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="profile border-2 p-2 rounded-full cursor-pointer">
+        <img
+          class="w-5"
+          src="https://img.icons8.com/?size=64&id=22396&format=png"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <section
+      id="banner"
+      class="flex flex-col justify-center items-center gap-5 *:text-center py-10"
+    >
+      <p class="text-gray-400">Bringing Families Together ❤️‍🔥</p>
+      <h1 class="text-5xl font-semibold max-w-lg">
+        Your Path to Adoption Starts Here
+      </h1>
+      <p class="text-sm max-w-xl">
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a.
+      </p>
+      <button class="btn bg-[#0E7A81] text-white">
+        <a href="#main">View More</a>
+      </button>
+      <div class="">
+        <img src="./aasets/pet.png" alt="" />
+      </div>
+    </section>
+
+    <div
+      id="overlay"
+      class="inset-0 fixed bg-black bg-opacity-85 z-10 justify-center items-center hidden"
+    >
+      <div class="bg-white p-10 rounded-lg text-center">
+        <img
+          src="https://img.icons8.com/?size=96&id=kRZicCB1E8B8&format=gif"
+          alt=""
+          class="mx-auto"
+        />
+        <h2 class="text-4xl font-bold mb-3">Congrates</h2>
+        <p class="text-lg">Adoption Process is Start For your Pet</p>
+        <h2 id="count-down" class="text-6xl font-black">3</h2>
+      </div>
+    </div>
+
+    <main id="main" class="min-h-screen py-10 w-10/12 mx-auto">
+      <div class="tittle text-center space-y-5">
+        <h1 class="text-2xl font-bold">Adopt Your Best Friend</h1>
+        <p class="max-w-xl mx-auto text-gray-500 text-sm">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+      </div>
+      <section
+        id="category"
+        class="flex flex-wrap gap-5 justify-between py-10"
+      ></section>
+      <section id="best-deal" class="flex justify-between items-center">
+        <h2 class="font-bold">Best Deal For you</h2>
+        <button
+          onclick="loadPets(undefined,true)"
+          class="btn bg-[#0E7A81] text-white hover:text-black"
+        >
+          Sort by Price
+        </button>
+      </section>
+
+      <div
+        id="spinner"
+        class="min-h-[200px] justify-center items-center hidden text-center mt-32"
+      >
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+
+      <section
+        id="shop-container"
+        class="grid grid-cols-12 gap-4 pt-10 *:h-full"
+      >
+        <div
+          id="card-container"
+          class="col-span-8 lg:col-span-9 p-2 grid lg:grid-cols-3 gap-5"
+        ></div>
+        <div
+          id="cart-gallery"
+          class="col-span-4 lg:col-span-3 p-2 grid md:grid-cols-2 gap-3 content-start"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="openModal" class="btn hidden" onclick="my_modal_5.showModal()">
+      open modal
+    </button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle modal-lg">
+      <div class="modal-box md:w-8/12 max-w-5xl">
+        <div id="modal-content"></div>
+        <div class="modal-action">
+          <form method="dialog" class="w-full">
+            <!-- if there is a button in form, it will close the modal -->
+            <button
+              class="btn w-full bg-[#0E7A8110] text-[#0E7A81] font-semibold"
+            >
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
